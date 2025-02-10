@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+    border: 2px solid blue;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+}
+
+
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+#online {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.flex-item-R0_center {
+    text-align: start;
+    background-color: rgb(131, 15, 131);
+    color: black;
+    padding: 10px;
+    flex: 33%;
+    border: 2px solid blue;
+    font-size: small;
+}
+
+.flex-item-R1_left {
+    background-color: #0ee24e;
+    color: black;
+    line-height: 0.1;
+    padding: 10px;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+.flex-item-R1_center {
+    background-color: dodgerblue;
+    color: black;
+    padding: 10px;
+    line-height: 0.1;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+.flex-item-R1_right {
+    background-color: #0ee24e;
+    color: black;
+    padding: 10px;
+    line-height: 0.1;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex-item-R2_left {
+    background-color: dodgerblue;
+    color: black;
+    padding: 10px;
+    line-height: 0.1;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+.flex-item-R2_center {
+    background-color: #0ee24e;
+    color: black;
+    padding: 10px;
+    flex: 33%;
+    line-height: 0.1;
+    border: 2px solid blue;
+}
+
+.flex-item-R2_right {
+    background-color: dodgerblue;
+    color: black;
+    line-height: 0.1;
+    padding: 10px;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+
+
+.flex-item-R3_center {
+    visibility: visible;
+    background-color: rgb(131, 15, 131);
+    color: black;
+    line-height: 0.1;
+    padding: 10px;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+.flex-item-R4_center {
+    visibility: visible;
+    background-color: dodgerblue;
+    line-height: 0.1;
+    color: black;
+    padding: 10px;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+.flex-item-R5_center {
+    visibility: visible;
+    background-color: black;
+    color: black;
+    padding: 10px;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+.flex-item-R6_center {
+    visibility: hidden;
+    background-color: rgb(131, 15, 131);
+    color: black;
+    padding: 10px;
+    flex: 33%;
+    border: 2px solid blue;
+}
+
+
+
+
+
+.button {
+    background-color: grey;
+    border: 2px solid white;
+    color: white;
+    padding-bottom: 10%;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 12px;
+    width: 110px;
+}
+
+
+
+
+.button:hover {
+    background-color: darkgrey
+}
+
+.button:active {
+    background-color: black;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 600px) {
+
+    .flex-item-R1_left,
+    .flex-item-R1_center,
+    .flex-item-R1_right,
+    .flex-item-R2_left,
+    .flex-item-R2_center,
+    .flex-item-R2_right,
+    .flex-item-R3_center {
+        flex: 100%;
+    }
+
+    h1 {
+        font-size: large;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+
+    }
+
+    .button {
+        background-color: grey;
+        border: 2px solid white;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline;
+        font-size: 16px;
+        border-radius: 16px;
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .button:hover {
+        background-color: darkgrey
+    }
+
+    .button:active {
+        background-color: black;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+}
+
+
+h3 {
+    color: white;
+}
+
+body {
+    background-color: #520152;
+}
+
+div {
+    color: white;
+
+}
+
+fieldset {
+    visibility: hidden;
+    color: white;
+    border-color: w;
+}
+
+span {
+
+    font-size: 20px;
+    color: #f80525;
+}
+
+fieldset {
+    padding-left: 10%;
+    padding-right: 10%;
+}
