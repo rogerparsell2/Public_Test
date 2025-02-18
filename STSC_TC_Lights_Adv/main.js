@@ -2,11 +2,27 @@
 
 
 
+var url_name = "";
+var url_card = "";
 
 
+//  index.html?name=roger_url&card=04:85:D4:A2:4C:68:80
+function geturlparams() {
+	var url_string = window.location.href; //window.location.href
+	var url = new URL(url_string);
+	var n = url.searchParams.get("name");
+	console.log("url_name: " + n);
+	var c = url.searchParams.get("card");
+	console.log("url_card: " + c);
 
+	localStorage.username = n;
+	localStorage.card_num = c;
 
+  url_name = n;
+  url_card = c;
+}
 
+geturlparams();
 
 
 
@@ -57,7 +73,7 @@ function onConnect() {
 
 //https://github.com/eclipse-paho/paho.mqtt.javascript
 function status_msg(msg) {
-  console.log("payload:  " + msg);
+  //console.log("payload:  " + msg);
 
   var msg_ps = msg;
   if ((msg_ps.includes("{")) && (msg_ps.includes("}"))) {
@@ -189,7 +205,7 @@ var user_credit = "Updating";
 
 function memberlist_msg(msg) {
   //console.log("HERE");
-  //console.log("payload:  " + msg);
+  console.log("payload:  " + msg);
 
   //count all closing ]
   var count = (msg.match(/]/g) || []).length;
@@ -206,7 +222,7 @@ function memberlist_msg(msg) {
 
     for (var i = 0; i < count - 1; i++) {
       //console.log("ARRAY: " + obj[i]);
-      var card_number = ("04:85:D4:A2:4C:68:80").toString();
+      var card_number = (url_card).toString();
       if (obj[i].includes(card_number)) {
         console.log("#############################################");
         console.log("found " + card_number + " at: " + i);
@@ -225,9 +241,11 @@ function memberlist_msg(msg) {
         console.log("last name: " + myArr[1]);
         console.log("momey: " + myArr[5]);
 
+        var firstname = myArr[0];
+        var lastname = myArr[1];
         user_credit = myArr[5];
 
-        document.getElementById("USERNAME").innerHTML = "User: " + localStorage.username + " | user_credit: " + user_credit;
+        document.getElementById("USERNAME").innerHTML = "User: " + localStorage.username + " | User Credit: " + firstname +" "+ lastname + " : " + user_credit + " | " + url_card + " | " + url_name;
         console.log("#############################################");
         break;
       }
@@ -1077,7 +1095,7 @@ function checkCookie() {
             setCookie("username", user, 30);
         }
     }
-    document.getElementById("USERNAME").innerHTML = "User: " + localStorage.username + " | user_credit: " + user_credit;
+    document.getElementById("USERNAME").innerHTML = "User: " + localStorage.username + " | User Credit: " + user_credit;
 } 
 
 
