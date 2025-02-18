@@ -185,7 +185,7 @@ function status_msg(msg) {
 
 
 
-
+var user_credit = "Updating";
 
 function memberlist_msg(msg) {
   //console.log("HERE");
@@ -225,7 +225,9 @@ function memberlist_msg(msg) {
         console.log("last name: " + myArr[1]);
         console.log("momey: " + myArr[5]);
 
+        user_credit = myArr[5];
 
+        document.getElementById("USERNAME").innerHTML = "User: " + localStorage.username + " | user_credit: " + user_credit;
         console.log("#############################################");
         break;
       }
@@ -1075,8 +1077,8 @@ function checkCookie() {
             setCookie("username", user, 30);
         }
     }
-    document.getElementById("USERNAME").innerHTML = "User: " + localStorage.username;
-}
+    document.getElementById("USERNAME").innerHTML = "User: " + localStorage.username + " | user_credit: " + user_credit;
+} 
 
 
 
